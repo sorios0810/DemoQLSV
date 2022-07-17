@@ -1,0 +1,70 @@
+﻿@model IEnumerable<DemoQLSV.Models.DMSV>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DMKhoa.TenKhoa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoSV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenSV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgaySinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoiSinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HocBong)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DMKhoa.TenKhoa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoSV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenSV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgaySinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NoiSinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HocBong)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaSV }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaSV }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaSV })
+        </td>
+    </tr>
+}
+
+</table>

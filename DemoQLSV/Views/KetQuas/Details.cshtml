@@ -1,0 +1,43 @@
+﻿@model DemoQLSV.Models.KetQua
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>KetQua</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DMMH.TenMH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DMMH.TenMH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DMSV.HoSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DMSV.HoSV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Diem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diem)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
